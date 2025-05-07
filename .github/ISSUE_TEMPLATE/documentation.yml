@@ -1,0 +1,46 @@
+name: 📚 Documentation
+description: Improve or add docs, tutorials, or diagrams
+title: "📚 [Docs] <short summary>"
+labels: ["type:docs", "status:triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📚 Documentation Update
+        Help us keep the knowledge base crystal clear!  
+        <hr>
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: ✍️ Scope
+      description: Which page, file, or guide needs work?
+      placeholder: |
+        • README → add local‑dev setup  
+        • /docs/architecture.md → update diagram
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 🖊️ Change Details
+      description: Outline additions, removals, or re‑writes.
+      placeholder: |
+        • Replace outdated npm script instructions  
+        • Add sequence diagram for login flow
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: docs_level
+    attributes:
+      label: 🏷️ Docs Level
+      options:
+        - Quick Fix
+        - Minor Update
+        - Major Overhaul
+      default: 1

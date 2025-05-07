@@ -1,0 +1,72 @@
+name: 🐞 Bug Report
+description: Something isn’t working as expected
+title: "🐞 [Bug] <brief summary>"
+labels: ["type:bug", "status:triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        Please double‑check existing issues before filing a new one.  
+        <hr>
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 📋 Steps to Reproduce
+      description: Numbered list—be precise!
+      placeholder: |
+        1. Go to Dashboard  
+        2. Click “Start Synonym‑Flex”  
+        3. Timer stays at 00:00
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 🤔 Expected Behaviour
+      placeholder: Timer counts down from 05:00.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 😵 Actual Behaviour
+      placeholder: Timer remains at 00:00; no error shown.
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🚦 Severity
+      options:
+        - S0 – Crash / Data loss
+        - S1 – Major (blocks core flow)
+        - S2 – Minor (work‑around exists)
+        - S3 – Cosmetic / Typos
+      default: 2
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: 🖥️ Environment
+      description: Browser, OS, app build, etc.
+      placeholder: "Chrome 125.0.6422 / macOS 14.4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 📑 Logs / Screenshots
+      description: Drag‑and‑drop images or paste stack traces.
+      render: text

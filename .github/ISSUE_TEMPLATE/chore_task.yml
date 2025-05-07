@@ -1,0 +1,40 @@
+name: 🧹 Maintenance / Chore
+description: Non‑feature work that keeps the project healthy
+title: "🧹 [Chore] <short summary>"
+labels: ["type:chore", "status:triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🧹 Maintenance Task
+        House‑keeping, dependency bumps, refactors — log it here.  
+        <hr>
+
+  - type: textarea
+    id: task
+    attributes:
+      label: 🔧 Task Description
+      description: What needs doing? Keep it concise & actionable.
+      placeholder: |
+        • Upgrade React to 19.0.0  
+        • Remove deprecated `useNavigate` wrapper
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 📈 Impact
+      options:
+        - Low – Code clean‑up only
+        - Medium – Improves build / perf
+        - High – Blocks upcoming feature
+      default: 1
+
+  - type: input
+    id: estimate
+    attributes:
+      label: ⏳ Estimate (ideal hours)
+      placeholder: "2"

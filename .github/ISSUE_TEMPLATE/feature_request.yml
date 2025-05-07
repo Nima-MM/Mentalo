@@ -1,0 +1,69 @@
+name: 🚀 Feature / User Story
+description: Propose a new capability or enhancement
+title: "🚀 [Feature] <short summary>"
+labels: ["type:feature", "status:triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ✨ New Feature / User Story
+        Help evolve **Mentalo‑Trainer** by completing every section.  
+        <hr>
+
+  - type: textarea
+    id: user_story
+    attributes:
+      label: 📌 User Story
+      description: "*Use the classic format—“As a … I want … so that …”*"
+      placeholder: |
+        As a learner I want daily reminders so that I keep my streak.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: 📝 Description & Notes
+      description: Bullet‑points or short paragraphs—what exactly should happen?
+      placeholder: |
+        • Show a modal at 08:00 with today’s micro‑routine  
+        • Modal auto‑closes after 30 sec if user ignores it
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: Observable, testable outcomes (numbered list preferred)
+      placeholder: |
+        1. Modal appears only once per day  
+        2. Streak counter increments when all tasks are done
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🔢 Priority
+      options:
+        - P0 – Critical / Blocker
+        - P1 – High
+        - P2 – Normal
+        - P3 – Low
+      default: 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 📎 Additional Context / Mock‑ups
+      description: Paste links, screenshots, or Figma frames.
+      placeholder: |
+        [Wireframe] https://figma.com/file/…
+      render: text

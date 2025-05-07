@@ -1,0 +1,55 @@
+name: 🎨 UI / UX Improvement
+description: Visual or interaction enhancement
+title: "🎨 [UI/UX] <short summary>"
+labels: ["type:ui-ux", "status:triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎨 UI / UX Improvement
+        Make Mentalo‑Trainer look & feel better.  
+        <hr>
+
+  - type: textarea
+    id: screen
+    attributes:
+      label: 🖼️ Affected Screen(s)
+      placeholder: "Dashboard • Synonym‑Flex Module"
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 🤔 Current Problem
+      description: What feels off? Include screenshots.
+      placeholder: |
+        Button hierarchy not clear, low contrast on dark mode …
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 💡 Proposed Change
+      description: Link Figma frames or sketches; list acceptance checks.
+      placeholder: |
+        • Increase primary‑button size  
+        • WCAG contrast ≥ 4.5:1  
+        • Add hover animation (100 ms ease‑out)
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: ux_severity
+    attributes:
+      label: 🏷️ UX Severity
+      options:
+        - Critical – blocks task completion
+        - Major – causes confusion
+        - Minor – cosmetic
+      default: 2

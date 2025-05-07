@@ -1,0 +1,50 @@
+name: 🛠️ Technical Task
+description: Backend, infrastructure, or refactor work
+title: "🛠️ [Tech] <short summary>"
+labels: ["type:tech", "status:triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🛠️ Technical Task
+        Non‑functional engineering work (refactor, infra, tooling).  
+        <hr>
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 Objective
+      placeholder: |
+        Migrate SQLite to Postgres using Prisma ORM
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 📝 Implementation Steps
+      placeholder: |
+        1. Add Postgres container to docker‑compose  
+        2. Update Prisma schema  
+        3. Run data migration script
+      render: text
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: 📈 Impact
+      options:
+        - High – platform blocker / security
+        - Medium – performance / scalability
+        - Low – internal clean‑up
+      default: 1
+
+  - type: input
+    id: estimate
+    attributes:
+      label: ⏳ Estimate (ideal hours)
+      placeholder: "6"
